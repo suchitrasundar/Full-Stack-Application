@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="design.css" />
+    <script src="jsfunctions.js"></script>
+  </head>
+  <body >
+  <header id="headd">
+    <div class="navbar">
+      <h2><span id="coloryellow">Group7</span> Bank</h2>
+      <div id="back">
+        <a href="Home.html">Home</a>
+        <div class="customer">
+          <button class="custbtn" onclick="myFunction()">
+            Customer Management
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="customer-content" id="custdropdown">
+            <a href="CreateCustomerScreen.html">Add Customer</a>
+            <a href="Customer_Update.html">Edit Customer</a>
+            <a href="delete_customer.html">Delete Customer</a>
+            <a href="searchAllCustomerDetails.html">Search ALL Customer Details</a>
+          </div>
+        </div>
+        <div class="bank">
+          <button class="bankbtn" onclick="myFunction1()">
+            Account Management
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content1" id="mybank">
+            <a href="CreateAccount.html">Add bank Account</a>
+            <a href="delete_account.html">Delete bank Account</a>
+            <a href="viewAllAccount.html">View ALL bank Account</a>
+          </div>
+        </div>
+        <a href="SearchCustomer.html">Search Customer Details</a>
+        <a href="AccountSearch.html">Search Bank Account Details</a>
+        <a href="login.html">Logout</a>
+      </div>
+    </div>
+  </header>
+<div id="centeralign">
+<h1>Create Customer Details</h1>
+  <form name="CreateCustomerScreen" action="CreateCustomerController"  method="post">
+	<table class="center">
+	
+        <tr>
+            <td><span class="names">Customer SSN</span></td>
+             
+              <td>  <input type="text" id="CustomerSSN"size="10" maxlength="9" 
+                 name="CustomerSSN" required  />
+            </td></tr>
+           
+            <tr>
+            <td><span class="names">Customer Name</span></td>
+              &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;
+            <td><input type="text" name="CustomerName" id="CustomerName" size="10" required />
+            </td></tr>
+            <tr>
+            <td><span class="names">Customer Age </span></td>
+              &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <td> <input type="text" name="CustomerAge" id="CustomerAge" size="10" required />
+            </td></tr>
+            <tr>
+            <td><span class="names">Customer Address</span></td>
+              &nbsp;&nbsp; &nbsp;&nbsp; 
+              <td><input  type="text" name="CustomerAddress" id="CustomerAddress" size="10" required  />
+            </td></tr>
+        <tr>
+        <td><span class="names"> State </span></td>
+          &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; 
+          &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp; 
+           <td> <select id="State" name="State"  onchange="selectStateandCity()" required> 
+                <option value="">-- State --</option> 
+                <option value="New York"> New York</option> 
+                <option value="New Jersey">New Jersey</option> 
+                <option value="Texas">Texas</option> 
+              </select> 
+        </td>
+</tr>
+<tr>
+    <td><span class="names">City</span></td>
+      &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; 
+      &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; 
+       <td> <select id="City" name="City" required></select> 
+    </td>
+  </tr>
+  <tr>
+  <td>
+  <input class="button" size="10" type ="submit" id="submit" value="Submit" ></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <td><input class="button" type="reset" id="submit" value = "Reset">
+</td>
+</tr>
+</table>
+</form>
+<br><br><p>hi</p><br><br>
+</div>
+
+
+  <footer class="footer">
+    <div class="abtus">
+      <h3 id="coloryellow">About Us</h3>
+      <p>
+        The Group 7 bank provides a broad spectrum of services and banking
+        solutions. Founded in it's late 20s, the bank has immensely curated
+        dynamic solutions for it's customers to manage their transactions and
+        accounts efficiently. It has been a great source of home loans for all
+        the customers living in the city. The Group 7 covers various nuances of
+        the bank services including credit cards, education and home loans.
+      </p>
+    </div>
+    <div class="services">
+      <h3 id="coloryellow">Services</h3>
+      <p>Retail and Customer Banking</p>
+      <p>Personal Internet Banking</p>
+      <p>Corporate Internet Banking</p>
+      <p>Debit and Credit Cards</p>
+    </div>
+    <div class="contactus">
+      <h3 id="coloryellow">Contact Us</h3>
+      <p>Email: group7@tcs.com</p>
+      <p>Phone: 220 78965432</p>
+      <p>Address: Albany, New York</p>
+    </div>
+    <br />
+    <div class="copy" id="coloryellow">
+      &copy; Copyright 2020 All Rights Reserved Group7Bank
+    </div>
+  </footer>
+</body>
+</html>
